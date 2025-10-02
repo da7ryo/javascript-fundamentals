@@ -83,3 +83,55 @@ if (isActionMovie) {
 } else {
   console.log('This is not an action movie');
 }
+
+const age2 = 25;
+if (age2 < 25) {
+  console.log('You are younger than 25');
+} else if (age2 === 25) {
+  console.log('You are 25');
+} else {
+  console.log('You are older than 25');
+}
+
+// **** TYPE CONVERSION VS TYPE COERCION ****
+
+const firstName = 'Dario';
+const lastName = 'Milanovic';
+console.log(firstName + ' ' + lastName);
+
+console.log(5 + 'Hello');
+
+// Whenever JavaScript converts a value from one type to another this is called type coersion
+
+const a = 3;
+const b = 'Hi';
+console.log(a + b);
+console.log(a);
+console.log(String(a)); // Whenever we convert a value from one type to another this is called type conversion
+console.log(a);
+
+// Whenever JavaScript is doing type coersion into boolean, it converts the value based on the concept of
+// thruthy and falsy values
+// Falsy values: 0, '', undefined, null
+
+if (5) {
+  console.log('Hello');
+}
+
+// **** LOGICAL OPERATORS: &&(and), ||(or), !(not) ****
+
+// And will return the first falsy operand, if not found it will return the last operand
+// Or will return the first thruthy operand, if not found it will return the last operand
+// Not will always return a boolean, so it always does type coersion into boolean and affter
+// it converts into boolean it returns the negation of it.
+
+console.log(!false);
+console.log(!true);
+console.log(!12);
+console.log(!undefined);
+
+console.log(5 && 'Hello' && 8 && 'Dario');
+
+if (5 && 'Hello' && 8 && 'Dario') {
+  console.log('Hi');
+}
