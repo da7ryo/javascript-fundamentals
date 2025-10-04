@@ -43,18 +43,18 @@ console.log(result);
 console.log(sum(4, 8));
 
 function calc(a, b, operation) {
-  if ((operation = 'mult')) {
-    console.log(a * b);
+  if (operation === 'mult') {
+    return a * b;
   }
-  if ((operation = 'add')) {
-    console.log(a + b);
+  if (operation === 'add') {
+    return a + b;
   }
-  if ((operation = 'sub')) {
-    console.log(a - b);
+  if (operation === 'sub') {
+    return a - b;
   }
-  if ((operation = 'div')) {
-    console.log(a / b);
+  if (operation === 'div') {
+    return a / b;
   }
 }
 
-calc(4, 7, 'sub'); // Operations: "add", "sub", "mult", "div"
+console.log(calc(4, 7, 'mult')); // Operations: "add", "sub", "mult", "div"
