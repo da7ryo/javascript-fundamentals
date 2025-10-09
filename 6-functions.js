@@ -9,6 +9,7 @@ function greet() {
   console.log('Hi!');
   console.log('Today is a good day');
   console.log('Bye!');
+  return 5;
 }
 
 greet();
@@ -46,6 +47,7 @@ function calc(a, b, operation) {
   if (operation === 'mult') {
     return a * b;
   }
+  console.log('Hi');
   if (operation === 'add') {
     return a + b;
   }
@@ -57,4 +59,26 @@ function calc(a, b, operation) {
   }
 }
 
-console.log(calc(4, 7, 'mult')); // Operations: "add", "sub", "mult", "div"
+console.log(calc(4, 7, 'add')); // Operations: "add", "sub", "mult", "div"
+
+function kgToPound(amountInKg) {
+  return amountInKg * 2.2;
+}
+
+console.log(kgToPound(89));
+
+function checkEnter(guestAge) {
+  if (guestAge >= 21) {
+    return true;
+  }
+  return false;
+}
+const guestName = 'Mateo';
+const guestAge = 27;
+const isAllowed = checkEnter(guestAge);
+
+if (isAllowed) {
+  console.log(`Dear ${guestName}, you are allowed to go into the club.`);
+} else {
+  console.log(`Sorry ${guestName}, you are under age.`);
+}
