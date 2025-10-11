@@ -74,7 +74,7 @@ function checkEnter(guestAge) {
   return false;
 }
 const guestName = 'Mateo';
-const guestAge = 27;
+const guestAge = 100;
 const isAllowed = checkEnter(guestAge);
 
 if (isAllowed) {
@@ -82,3 +82,4 @@ if (isAllowed) {
 } else {
   console.log(`Sorry ${guestName}, you are under age.`);
 }
+console.log(isAllowed);
