@@ -32,3 +32,8 @@ function getLastArrayElementAndIndex2(arr) {
   const lastIndex = arr.length - 1;
   return [getLastArrayElement(arr), lastIndex];
 }
+
+function sumFirstAndLast(arr) {
+  return arr[0] + arr[arr.length - 1];
+}
+console.log(sumFirstAndLast([9, 5, 13, 21]));
