@@ -39,23 +39,25 @@ for (let i = 0; i <= 20; i++) {
 // We use for loop if we know how many literations we need
 
 let i = 0;
+let sum = 0;
 while (i <= 10) {
   console.log(i);
+  sum += i;
+  console.log(sum);
   i++;
 }
 
-function getUserInput() {
-  console.log('Please guess the number from 1 to 20');
-  return 4;
+console.log(sum);
+
+function multByTwo(arr) {
+  const newArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    const currentItem = arr[i];
+    newArr.push(currentItem * 2);
+  }
+
+  return newArr;
 }
 
-const secretNumber = 10;
-let count = 1;
-let userInput = getUserInput();
-while (userInput !== secretNumber) {
-  userInput = getUserInput();
-  if (count > 10) {
-    break;
-  }
-  count++;
-}
+console.log(multByTwo([2, 3, 5]));
