@@ -61,3 +61,16 @@ function multByTwo(arr) {
 }
 
 console.log(multByTwo([2, 3, 5]));
+
+function filterEven(arr) {
+  const evenNumbers = [];
+  for (let i = 0; i < arr.length; i++) {
+    const currentNum = arr[i];
+    if (currentNum % 2 === 0) {
+      evenNumbers.push(currentNum);
+    }
+  }
+  return evenNumbers;
+}
+
+console.log(filterEven([4, 8, 11, 15, 18]));
