@@ -42,15 +42,55 @@ function f2() {
 // In a regualar function call this gets the value of the global object
 f2();
 
-const obj = {
+function calcBirthdate() {
+  console.log(this);
+}
+const obj1 = {
   firstName: 'Mateo',
   age: 27,
   // When a property of a object has a function as the value, we called that property method
-  calcBirthdate: function () {
-    console.log(this);
-  },
+
+  calcBirthdate: calcBirthdate,
+};
+
+const obj2 = {
+  firstName: 'Dario',
+  age: 33,
+  // When a property of a object has a function as the value, we called that property method
+
+  calcBirthdate: calcBirthdate,
 };
 
 // If a function is called as a method on a object, this get the value of this object that has called the method
 
-obj.calcBirthdate();
+obj1.calcBirthdate();
+
+obj2.calcBirthdate();
+calcBirthdate();
+
+console.log('age');
+
+global.console.log(5);
+
+const arr = [];
+arr.push('Dario');
+
+function copyObj(obj) {
+  const newObj = {};
+
+  const propertyNames = Object.keys(obj);
+
+  for (let i = 0; i < propertyNames.length; i++) {
+    const currentName = propertyNames[i];
+
+    newObj[currentName] = obj[currentName];
+  }
+
+  return newObj;
+}
+
+const obj3 = copyObj(obj1);
+obj3.firstName = 'Nikola';
+
+console.log(obj1);
+console.log(obj3);
