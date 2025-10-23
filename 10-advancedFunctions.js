@@ -94,3 +94,48 @@ obj3.firstName = 'Nikola';
 
 console.log(obj1);
 console.log(obj3);
+
+const dog = {
+  vrsta: 'Pitt Bull',
+  boja: 'smedja',
+  sound: function () {
+    console.log('wow wow');
+  },
+};
+
+dog.sound();
+
+// **** FUNCTION RECIEVING OTHER FUNCTIONS AS ARGUMENTS ****
+
+function calc(f1, a, b) {
+  const result = f1(a, b);
+  console.log('The result of your calculation is ' + result);
+}
+
+const add = (a, b) => a + b;
+const sub = (a, b) => a - b;
+
+calc(add, 3, 5);
+calc(sub, 8, 3);
+
+// If a function recives another function as an argument, the one that was recieving is called "higher order function",
+// and the function that was the argument is called "call back function"
+
+function createGreeter(greeting) {
+  return function (name) {
+    return `${greeting} ${name}`;
+  };
+}
+
+const sayHello = createGreeter('Hello');
+
+console.log(sayHello('Mateo'));
+
+console.log(sayHello('Dario'));
+
+const sayHi = createGreeter('Hi');
+console.log(sayHi('Mateo'));
+
+const sayGodbye = createGreeter('Good bye');
+
+console.log(sayGodbye('Mateo'));
