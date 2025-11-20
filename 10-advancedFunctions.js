@@ -139,3 +139,21 @@ console.log(sayHi('Mateo'));
 const sayGodbye = createGreeter('Good bye');
 
 console.log(sayGodbye('Mateo'));
+
+function calc(a, b, opFn) {
+  console.log('Calculator started');
+  const result = opFn(a, b);
+  console.log(result);
+  console.log('Calculator finished');
+}
+
+function add(g, h) {
+  // let g = 3
+  // let h = 4
+  return g + h;
+}
+
+const broj1 = 10;
+const broj2 = 15;
+
+calc(broj1, broj2, add);
