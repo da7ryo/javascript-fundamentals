@@ -28,3 +28,7 @@ function filterArr(arr, cb) {
 }
 
 console.log(filterArr([6, 2, 1, 7, 3, 9], (item) => item > 5));
+
+const arr = [2, 9, 5, 7, 13, 22, 4];
+
+console.log(arr.map((item) => item * 3).filter((item) => item > 30));
