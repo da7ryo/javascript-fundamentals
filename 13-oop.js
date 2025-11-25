@@ -48,3 +48,39 @@ Person.greet();
 
 console.log(person1.__proto__);
 console.log(person1.__proto__ === Person.prototype);
+
+// Object.create
+
+const b = {
+  greet: function () {
+    console.log('Greet');
+  },
+};
+
+const a = Object.create(b);
+console.log(a);
+a.greet();
+
+// OOP concepts: encapsulation, apstractions, inheritations, polymorphism
+
+// **** ENCAPSULATION ****
+
+function BankAccaunt(owner) {
+  let balance = 0;
+  this.owner = owner;
+
+  this.deposit = function (amount) {
+    if (amount > 0) {
+      balance += amount;
+    }
+  };
+  this.getBalance = function () {
+    return balance;
+  };
+}
+
+const ba1 = new BankAccaunt('Dario');
+ba1.deposit(10);
+ba1.deposit(7);
+console.log(ba1);
+console.log(ba1.getBalance());
