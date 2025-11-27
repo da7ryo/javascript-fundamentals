@@ -1,0 +1,33 @@
+function Person(firstName, lastName, birthYear) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.birthYear = birthYear;
+}
+
+Person.prototype.calcAge = function () {
+  return 2025 - this.birthYear;
+};
+
+Person.prototype.greet = function () {
+  console.log('Hi');
+};
+
+function Student(firstName, lastName, birthYear, indexNumber) {
+  // We need a way to put all those parameters automatically on the newly created object
+  Person.call(this, firstName, lastName, birthYear);
+  this.indexNumber = indexNumber;
+}
+
+Student.prototype = Object.create(Person.prototype);
+
+Student.prototype.logIndex = function () {
+  console.log(this.indexNumber);
+};
+
+Student.prototype.greet = function () {
+  console.log('Hello');
+};
+
+const student = new Student('Goran', 'Ivanovic', 1990, 1452);
+
+student.greet();
