@@ -1,4 +1,6 @@
+const { isUtf8 } = require('buffer');
 const fs = require('fs');
+const fsp = require('fs/promises');
 
 setTimeout(() => {
   console.log('Hello');
@@ -10,6 +12,7 @@ setTimeout(() => {
 
 console.log('Hi');
 
+/*
 fs.readFile('testData1.txt', 'utf-8', (err, data) => {
   if (err) {
     console.log('Something went wrong, couldn´t read file');
@@ -34,7 +37,25 @@ fs.readFile('testData1.txt', 'utf-8', (err, data) => {
     });
   });
 });
+*/
 
 console.log('pikachu');
 
-// **** Promise objects ****
+// **** Promises ****
+
+fsp
+  .readFile('testData1.txt', 'utf-8')
+  .then((val) => {
+    console.log(val);
+    return fsp.readFile('testData21.txt', 'utf-8');
+  })
+  .then((val) => {
+    console.log(val);
+    return fsp.readFile('testData3.txt', 'utf-8');
+  })
+  .then((val) => {
+    console.log(val);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
