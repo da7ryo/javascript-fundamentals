@@ -47,7 +47,7 @@ fsp
   .readFile('testData1.txt', 'utf-8')
   .then((val) => {
     console.log(val);
-    return fsp.readFile('testData21.txt', 'utf-8');
+    return fsp.readFile('testData2.txt', 'utf-8');
   })
   .then((val) => {
     console.log(val);
