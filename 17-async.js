@@ -59,3 +59,34 @@ fsp
   .catch((err) => {
     console.log(err);
   });
+
+// **** PROMISFY ****
+
+function wait(timeInSec) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve();
+    }, timeInSec * 1000);
+  });
+}
+
+wait(5).then(() => {
+  console.log('Hello world');
+});
+
+// **** ASYNC/AWAIT  ****
+
+async function readFiles() {
+  try {
+    const data1 = await fsp.readFile('testData1.txt', 'utf-8');
+    console.log(data1);
+    const data2 = await fsp.readFile('testData2.txt', 'utf-8');
+    console.log(data2);
+    const data3 = await fsp.readFile('testData3.txt', 'utf-8');
+    console.log(data3);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+readFiles();
