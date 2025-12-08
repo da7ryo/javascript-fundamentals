@@ -1,4 +1,3 @@
-const { isUtf8 } = require('buffer');
 const fs = require('fs');
 const fsp = require('fs/promises');
 
