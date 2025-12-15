@@ -1,0 +1,22 @@
+{
+  "name": "javascript-fundamentals",
+  "version": "1.0.0",
+  "description": "Learning JavaScript fundamental",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/da7ryo/javascript-fundamentals.git"
+  },
+  "author": "Dario Milanovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/da7ryo/javascript-fundamentals/issues"
+  },
+  "homepage": "https://github.com/da7ryo/javascript-fundamentals#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
