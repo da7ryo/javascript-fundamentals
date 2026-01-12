@@ -60,6 +60,8 @@ const dataFetcher = new DataFetcher();
 
 dataFetcher.processData();
 
-setTimeout(() => {
+console.log(dataFetcher.data);
+
+/* setTimeout(() => {
   console.log(dataFetcher.data);
-}, 5000);
+}, 5000); */
