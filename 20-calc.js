@@ -13,10 +13,13 @@ function mult(a, b) {
 function div(a, b) {
   return a / b;
 }
-
+/*
 module.exports = {
   add, // add: add
   sub,
   mult,
   div,
-};
+}; */
+
+module.exports.add = add;
+module.exports.sub = sub;

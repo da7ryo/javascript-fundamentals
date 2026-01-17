@@ -30,7 +30,7 @@ class InventoryManager {
     });
   }
 
-  getLowStockProducts() {
+  getLowStockProducts(treshold) {
     /* const newArr = [];
     for (let i = 0; i < this.items.length; i++) {
       const currentProduct = this.items[i];
@@ -40,7 +40,7 @@ class InventoryManager {
     }
     return newArr;
    */
-    return this.items.filter((item) => item.isLowStock(8));
+    return this.items.filter((item) => item.isLowStock(treshold));
   }
 }
 const inventoryManager = new InventoryManager();
